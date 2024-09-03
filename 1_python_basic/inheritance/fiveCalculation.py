@@ -1,6 +1,5 @@
 # coding: utf-8
 #fivecalculation.py
-from fiveCalculation import fourCalculation
 class FiveCalculation(FourCalculation):
     """Adding power calculation"""
     def __init__(self, first, second,third):
@@ -11,6 +10,7 @@ class FiveCalculation(FourCalculation):
 
     def div(self):
         print("\nThis is overriding method")
+        # raise NotImplementedError("This method should not be used in Derived class")
         if self.second == 0: #Method overriding
             return 0
         else:
@@ -27,3 +27,4 @@ print(f'Multiplication result is {d.mul()}')
 print(f'Division result is {d.div()}')  
 print(f'Power {d.pow()}')
 
+get_ipython().run_line_magic('save', 'fiveCalculation.py 18')
